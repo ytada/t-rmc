@@ -1,2 +1,2 @@
 # t-rmc
-My WebSite &lt;http://t-rmc.jp>
+My WebSite <http://t-rmc.jp>
