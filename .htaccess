@@ -1,0 +1,8 @@
+# begin php settings by cpanel
+Action php-script /.system_cgi/php72.cgi
+
+RewriteEngine On
+
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
+# end php settings by cpanel
