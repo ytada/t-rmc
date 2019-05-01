@@ -76,28 +76,43 @@
         <h3>CONTACT ME</h3>
         <hr>
         <p>ご質問・お問い合わせ等ございましたら、<br>
-          <script type="text/javascript">
-          <!--
-          function convertMoji2_shtml(t){
-            var s="",moji="";
-            for(var i=0;i<t.length;i++){
-              moji=t.charCodeAt(i);
-              s +=String.fromCharCode(moji+1);
-            }
-            return s;
-          }
-          var em_shtml=convertMoji2_shtml(String.fromCharCode(114,103,104,109,99,96,109,63,120,116,106)+String.fromCharCode(104,110,44,115,96,99,96,45,98,110,108));
-          document.write('<a href="mai'+'lto:'+em_shtml+'">'+em_shtml+'</a>');
-          // -->
-          </script>
-          <noscript><img src="mailto_green.png" height=24></noscript>
-          <br>
-          まで、お気軽にご連絡下さい。<br>
-          <br>
-          どうぞよろしくお願いいたします!
-        </p>
+          以下のフォームよりお気軽にご連絡下さい。</p>
       </div>
     </div>
+    <div class="row mt">
+      <div class="col-lg-8 col-lg-offset-2">
+        <form class="contact-form php-mail-form" role="form" action="contactform/contactform.php" method="POST">
+
+            <div class="form-group">
+              <input type="name" name="name" class="form-control" id="contact-name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" >
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" class="form-control" id="contact-email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" name="subject" class="form-control" id="contact-subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+              <div class="validate"></div>
+            </div>
+
+            <div class="form-group">
+              <textarea class="form-control" name="message" id="contact-message" placeholder="Your Message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
+              <div class="validate"></div>
+            </div>
+
+            <div class="loading"></div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+
+            <div class="form-send">
+              <button type="submit" class="btn btn-large">Send Message</button>
+            </div>
+
+          </form>
+      </div>
+    </div>
+    <!-- /row -->
   </div>
   <!-- /container -->
 
